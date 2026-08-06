@@ -22,23 +22,72 @@
 }
 
 @layer base {
-  * { @apply border-border; }
-  html { scroll-behavior: smooth; }
-  body { @apply bg-cream text-ink antialiased; font-family: var(--font-body), sans-serif; }
-  h1, h2, h3, h4, .font-display { font-family: var(--font-display), Georgia, serif; }
-  ::selection { background: #ff5a1f; color: #fff; }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink antialiased;
+    font-family: var(--font-body), sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+  }
+  ::selection {
+    background: #ff5a1f;
+    color: #fff;
+  }
 }
 
 @layer utilities {
-  .text-ink { color: #17321f; }
-  .bg-ink { background-color: #17321f; }
-  .text-green { color: #2f6b2e; }
-  .bg-green { background-color: #2f6b2e; }
-  .bg-green-dark { background-color: #245522; }
-  .bg-cream { background-color: #fffaf0; }
-  .animate-rise { animation: rise .8s ease-out both; }
-  .animate-float { animation: float 7s ease-in-out infinite; }
+  .text-ink {
+    color: #17321f;
+  }
+  .bg-ink {
+    background-color: #17321f;
+  }
+  .text-green {
+    color: #2f6b2e;
+  }
+  .bg-green {
+    background-color: #2f6b2e;
+  }
+  .bg-green-dark {
+    background-color: #245522;
+  }
+  .bg-cream {
+    background-color: #fffaf0;
+  }
+  .animate-rise {
+    animation: rise 0.8s ease-out both;
+  }
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
+  }
 }
 
-@keyframes rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-8px) rotate(.5deg); } }
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
