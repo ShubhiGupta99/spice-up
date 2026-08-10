@@ -28,7 +28,7 @@ import {
 import menuItems from '@/data/menu.json';
 import { CONTACT, PLAN_EXPIRY } from '@/lib/constants';
 
-const foodImage = 'home.png';
+const foodImage = 'food.png';
 
 const fixedOptions = ['Roti', 'Rice', 'Salad', 'Raita'];
 
