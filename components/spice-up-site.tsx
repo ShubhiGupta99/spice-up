@@ -21,6 +21,7 @@ import {
   Star,
   Truck,
   Utensils,
+  RefreshCw,
   X,
 } from 'lucide-react';
 
@@ -363,43 +364,60 @@ function HowItWorks() {
   const items = [
     {
       icon: PackageCheck,
-      title: 'Choose your plan',
-      text: 'Pick 7 or 30 days of delicious, no-fuss tiffin service.',
+      title: 'First day',
+      text: 'We deliver a fresh meal in a clean steel tiffin at your doorstep.',
+      image: '/TIFFIN.PNG',
     },
     {
       icon: Utensils,
-      title: 'Day one: fresh tiffin',
-      text: 'We deliver a freshly cooked meal in a clean steel tiffin to your doorstep.',
+      title: 'Next day',
+      text: 'You keep the tiffin after enjoying your meal.',
+      image: '/second.png',
     },
     {
       icon: Truck,
-      title: 'Day two: swap & repeat',
-      text: 'We take the used tiffin and provide a new fresh tiffin for your next meal.',
+      title: 'We deliver & exchange',
+      text: 'We bring a new fresh tiffin and take back the old empty one.',
+      image: '/food.PNG',
+    },
+    {
+      icon: RefreshCw,
+      title: 'Repeat',
+      text: 'This simple exchange continues with every order.',
+      image: null,
     },
   ];
+
   return (
     <section id="how-it-works" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="max-w-xl">
-          <SectionLabel>As Easy as Every Meal</SectionLabel>
+        <div className="mx-auto max-w-2xl text-center">
+          <SectionLabel>
+            <span className="mx-auto">How it works</span>
+          </SectionLabel>
           <h2 className="font-display text-5xl font-bold leading-tight tracking-[-.04em] text-ink sm:text-6xl">
             Good food should fit into your day.
           </h2>
+          <p className="mx-auto mt-5 max-w-lg text-base leading-7 text-ink/60">
+            One fresh tiffin, one easy exchange, and a better meal waiting for you every day.
+          </p>
         </div>
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {items.map(({ icon: Icon, title, text }, i) => (
-            <div
-              key={title}
-              className="relative rounded-3xl border border-black/5 bg-cream p-7 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-100/50"
-            >
-              <span className="absolute right-6 top-5 font-display text-5xl font-bold text-orange-500/15">
-                0{i + 1}
-              </span>
-              <div className="mb-8 grid h-14 w-14 place-items-center rounded-2xl bg-white text-green shadow-sm">
-                <Icon size={25} />
+        <div className="relative mt-16 grid gap-10 md:grid-cols-4 md:gap-0">
+          <div className="absolute left-[12%] right-[12%] top-9 hidden border-t border-dashed border-orange-300 md:block" />
+          {items.map(({ icon: Icon, title, text, image }, i) => (
+            <div key={title} className="relative px-4 text-center md:border-r md:border-orange-200/70 md:last:border-r-0">
+              <div className="relative z-10 mx-auto grid h-12 w-12 place-items-center rounded-full bg-green font-display text-lg font-bold text-white shadow-lg shadow-green/20">
+                {i + 1}
               </div>
-              <h3 className="font-display text-2xl font-bold text-ink">{title}</h3>
-              <p className="mt-3 max-w-xs text-sm leading-7 text-ink/60">{text}</p>
+              <div className="mx-auto mt-7 flex h-36 max-w-[190px] items-center justify-center overflow-hidden rounded-3xl bg-cream p-4 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-orange-100/60">
+                {image ? (
+                  <Image src={image} alt={title} width={190} height={144} className="h-full w-full object-contain mix-blend-multiply" />
+                ) : (
+                  <Icon size={66} strokeWidth={1.4} className="text-green" />
+                )}
+              </div>
+              <h3 className="mx-auto mt-6 max-w-[190px] font-display text-xl font-bold capitalize text-ink">{title}</h3>
+              <p className="mx-auto mt-3 max-w-[210px] text-sm leading-6 text-ink/60">{text}</p>
             </div>
           ))}
         </div>
