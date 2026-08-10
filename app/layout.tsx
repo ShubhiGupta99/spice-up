@@ -6,11 +6,27 @@ const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-body' });
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-display' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://spiceup.co'),
-  title: 'The Dabba Story | Fresh home-style tiffin service every day',
+  metadataBase: new URL('https://www.thedabbastory.in'),
+ 
+  title: "The Dabba Story | Fresh Home-Style Tiffin Service",
+
   description:
-    'Fresh, home-style tiffin service delivered to your door. We bring a clean steel tiffin on day one, take the used one on day two, and replace it with a new fresh tiffin. Choose a 7-day or 30-day subscription.',
-  keywords: ['tiffin subscription', 'home style food', 'meal delivery', 'Indian lunch delivery'],
+    "The Dabba Story brings fresh, home-style meals to your doorstep. Choose from flexible 7-day and 30-day lunch or dinner subscriptions, served in reusable steel tiffins.",
+
+  keywords: [
+    "tiffin service",
+    "home-style food",
+    "meal delivery",
+    "lunch subscription",
+    "dinner subscription",
+    "The Dabba Story",
+  ],
+
+  icons: {
+    icon: "/favicon1.png",
+     shortcut: "/favicon1.png",
+    apple: "/apple-touch-icon.png", // optional
+  },
   openGraph: {
     title: 'The Dabba Story | Fresh home-style tiffin service every day',
     description:

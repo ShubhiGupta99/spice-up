@@ -2,37 +2,37 @@
   {
     "day": "Monday",
     "dal": "Dal Tadka/Dal Fry",
-    "sabzi": "Aloo Gobhi/Baigan Bharta",
+    "sabzi": "Aloo Matar/ Aloo Beans",
     "color": "bg-orange-50"
   },
   {
     "day": "Tuesday",
-    "dal": "Rajma Masala/Dal Makhni",
+    "dal": "Rajma ",
     "sabzi": "Mix Veg",
     "color": "bg-emerald-50"
   },
   {
     "day": "Wednesday",
-    "dal": "Chana Dal/Chana Masala",
-    "sabzi": "Paneer Tikka Masala/Paneer Bhurji",
+    "dal": "Chole",
+    "sabzi": "Seasonal Vegetables",
     "color": "bg-yellow-50"
   },
   {
     "day": "Thursday",
-    "dal": "Moong Dal/Kadhi Pakoda",
-    "sabzi": "Kadai Vegetable/Aloo Matar",
+    "dal": "Kadhi Pakora",
+    "sabzi": "Aloo Jeera",
     "color": "bg-orange-50"
   },
   {
     "day": "Friday",
-    "dal": "Chole/Aloo Soyabean",
-    "sabzi": "Bhindi Masala/Parwal Masala",
+    "dal": "Paneer",
+    "sabzi": "Mix Veg",
     "color": "bg-emerald-50"
   },
   {
     "day": "Saturday",
-    "dal": "Matar Paneer/Matar Makhana",
-    "sabzi": "Aloo Shimla/Lauki",
+    "dal": "Dal Tadka/Dal Fry",
+    "sabzi": "Seasonal Vegetables",
     "color": "bg-yellow-50"
   },
   {

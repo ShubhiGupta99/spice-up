@@ -1,6 +1,6 @@
 export const PLAN_EXPIRY = {
-  '7 days': '30 days',
-  '30 days': '90 days',
+  '7 days': '15 days',
+  '30 days': '50 days',
 } as const;
 
 export const CONTACT = {

@@ -48,20 +48,20 @@ const faqs = [
   {
     question: 'Can I pause my subscription?',
     answer:
-      'Yes. Pause or skip anytime from your account, with no penalty and no awkward phone calls. Your remaining meals stay safe for when you are ready.',
+      'Yes. Pause or skip anytime with a simple call or message., with no penalty. Your remaining meals stay safe for when you are ready until the subsription expires as per your plan.',
   },
   {
     question: 'Where do you deliver?',
     answer:
-      'We currently deliver across central neighborhoods and business districts in the city. Enter your area on the contact page and we will confirm your doorstep coverage.',
+      'We currently deliver across central neighborhoods and business districts in Gurugram , Haryana as we are based upon Sector-49. Enter your area on the contact page and we will confirm your doorstep coverage.',
   },
   {
     question: 'Can I subscribe for both lunch and dinner?',
     answer :'Yes! We offer separate subscriptions for Lunch and Dinner. You can subscribe to either one or choose both based on your needs.'
   },
   {
-    question :'Does a 7-day plan include both lunch and dinner?',
-    answer:`No. A 7-day plan covers one meal per day (either Lunch or Dinner) for 7 days. If you'd like both Lunch and Dinner, you'll need to purchase separate subscriptions for each.`
+    question :'Does a 7-day/30-day plan include both lunch and dinner?',
+    answer:`No. A 7-day/30-day plan covers one meal per day (either Lunch or Dinner) for 7 days. If you'd like both Lunch and Dinner, you'll need to purchase separate subscriptions for each.`
   }
 ];
 
@@ -206,7 +206,7 @@ export function Footer() {
         <div className="rounded-3xl bg-white/10 p-5">
           <p className="font-display text-xl font-bold">Hungry for a better routine?</p>
           <p className="mt-2 text-sm leading-6 text-white/60">
-            Join the lunch club and get your first meal on us.
+            Join the club and get your first meal on us.
           </p>
           <Link
             href="/pricing"
@@ -293,7 +293,12 @@ export function HomePage() {
                 <p className="text-xs text-ink/55">Pause anytime</p>
               </div>
               <div className="absolute -bottom-2 left-0 z-10 rounded-2xl border border-white/80 bg-white/90 p-4 shadow-xl backdrop-blur">
-                <p className="font-display text-2xl font-bold text-orange-500">₹64.29</p>
+              <p className="font-display text-2xl font-bold text-orange-500">
+  Starting from{" "}
+  <span className="mr-2 text-ink/40 line-through">₹105</span>
+  ₹87.50
+  <sup className="ml-0.5 text-xs align-super">*</sup>
+</p>
                 <p className="text-[10px] font-bold uppercase tracking-wider text-ink/50">
                   effective per meal
                 </p>
@@ -366,7 +371,7 @@ function HowItWorks() {
       icon: PackageCheck,
       title: 'First day',
       text: 'We deliver a fresh meal in a clean steel tiffin at your doorstep.',
-      image: '/TIFFIN.PNG',
+      image: '/image1.PNG',
     },
     {
       icon: Utensils,
@@ -378,7 +383,7 @@ function HowItWorks() {
       icon: Truck,
       title: 'We deliver & exchange',
       text: 'We bring a new fresh tiffin and take back the old empty one.',
-      image: '/food.PNG',
+      image: '/image2.PNG',
     },
     {
       icon: RefreshCw,
@@ -434,7 +439,7 @@ function Story() {
           <div className="absolute -left-4 -top-4 h-28 w-28 rounded-full border border-orange-400/40" />
           <div className="overflow-hidden rounded-[3rem] rounded-bl-[8rem] bg-orange-500 p-3">
             <img
-              src="/second.png"
+              src="/food.png"
               alt="Traditional stainless-steel tiffin carriers"
               className="h-[430px] w-full rounded-[2.5rem] rounded-bl-[7rem] object-cover"
             />
@@ -561,7 +566,7 @@ function Testimonials() {
                 that makes the whole day easier.”
               </p>
               <footer className="mt-6 text-sm font-bold text-orange-200">
-                — Riya, product designer
+                — Shubhi, product designer
               </footer>
             </blockquote>
             <blockquote className="rounded-3xl bg-orange-500 p-7">
@@ -569,7 +574,7 @@ function Testimonials() {
                 “I used to spend 20 minutes deciding what to eat. Now I just wait for the little
                 green delivery bag.”
               </p>
-              <footer className="mt-6 text-sm font-bold text-orange-100">— Abhinit, founder</footer>
+              <footer className="mt-6 text-sm font-bold text-orange-100">— Maneesh, Co-Founder</footer>
             </blockquote>
           </div>
         </div>
@@ -665,12 +670,12 @@ export function PricingPage() {
           <div className="mx-auto mt-14 grid max-w-4xl gap-6 lg:grid-cols-2">
             <PlanCard
               days="7 days"
-              price="450"
-              per="64.29"
+              price="630"
+              per="90"
               tag="Try the routine"
               featured={false} 
             />
-            <PlanCard days="30 days" price="1,875" per="62.50" tag="Most popular" featured />
+            <PlanCard days="30 days" price="2,625" per="87.5" tag="Most popular" featured />
           </div>
           <div className="mx-auto mt-12 flex max-w-3xl flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-semibold text-ink/55">
             <span>
@@ -708,61 +713,123 @@ function PlanCard({
 }) {
   return (
     <div
-      className={`relative rounded-[2rem] p-8 ${featured ? 'bg-green text-white shadow-2xl shadow-green/25' : 'bg-white text-ink shadow-lg shadow-orange-100/50'}`}
+      className={`relative rounded-[2rem] p-8 ${
+        featured
+          ? "bg-green text-white shadow-2xl shadow-green/25"
+          : "bg-white text-ink shadow-lg shadow-orange-100/50"
+      }`}
     >
       <span
-        className={`absolute right-7 top-7 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${featured ? 'bg-orange-500 text-white' : 'bg-orange-50 text-orange-600'}`}
+        className={`absolute right-7 top-7 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${
+          featured
+            ? "bg-orange-500 text-white"
+            : "bg-orange-50 text-orange-600"
+        }`}
       >
         {tag}
       </span>
-      <div
-        className={`mb-8 grid h-14 w-14 place-items-center rounded-2xl ${featured ? 'bg-white/10 text-orange-200' : 'bg-orange-50 text-orange-500'}`}
-      >
-        <Utensils size={25} />
-      </div>
+
       <p
-        className={`text-sm font-bold uppercase tracking-[.2em] ${featured ? 'text-green-100' : 'text-ink/45'}`}
+        className={`mb-8 text-sm font-bold uppercase tracking-[.2em] ${
+          featured ? "text-green-100" : "text-ink/45"
+        }`}
       >
         {days} plan
       </p>
-      <div className="mt-3 flex items-end gap-2">
-        <span className="font-display text-6xl font-bold tracking-[-.06em]">₹{price}</span>
-        <span className={`mb-3 text-sm ${featured ? 'text-white/60' : 'text-ink/45'}`}>total</span>
+
+      <div className="flex items-baseline gap-3">
+        <span
+          className={`text-4xl font-black ${
+            featured ? "text-white" : "text-ink"
+          }`}
+        >
+          ₹{price}
+        </span>
+
+      
       </div>
-      <p className={`text-sm ${featured ? 'text-white/65' : 'text-ink/55'}`}>
-        7 fresh meals including 1 bonus meal
+
+      <span
+        className={`mb-3 block text-sm ${
+          featured ? "text-white/60" : "text-ink/45"
+        }`}
+      >
+        total
+      </span>
+
+      <p
+        className={`text-sm ${
+          featured ? "text-white/65" : "text-ink/55"
+        }`}
+      >
+        {days === "30 days"
+          ? "30 fresh meals including 5 bonus meals"
+          : "7 fresh meals including 1 bonus meal"}
       </p>
-      <p className={`mt-2 text-xs ${featured ? 'text-white/55' : 'text-ink/45'}`}>
-        Meals must be consumed within {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start, after which the plan expires.
+
+      <p
+        className={`mt-2 text-xs ${
+          featured ? "text-white/55" : "text-ink/45"
+        }`}
+      >
+        Meals must be consumed within{" "}
+        {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start,
+        after which the plan expires.
       </p>
-      <div className={`my-8 border-t pt-7 ${featured ? 'border-white/15' : 'border-ink/10'}`}>
-        <p className="text-sm font-bold">Your plan includes</p>
-        <ul className={`mt-4 grid gap-3 text-sm ${featured ? 'text-white/75' : 'text-ink/60'}`}>
-          <li>
-            <Check className="mr-2 inline text-orange-400" size={16} />
-            Daily doorstep delivery
-          </li>
-          <li>
-            <Check className="mr-2 inline text-orange-400" size={16} />
-            Reusable steel tiffin exchange
-          </li>
-          <li>
-            <Check className="mr-2 inline text-orange-400" size={16} />
-            Pause or skip anytime
-          </li>
+
+      <div
+        className={`my-8 border-t pt-7 ${
+          featured ? "border-white/15" : "border-ink/10"
+        }`}
+      >
+        <p className="font-bold">Your plan includes</p>
+
+        <ul
+          className={`mt-4 grid gap-3 text-sm ${
+            featured ? "text-white/75" : "text-ink/60"
+          }`}
+        >
+          <li>Daily doorstep delivery</li>
+          <li>Reusable steel tiffin exchange</li>
+          <li>Pause or skip anytime</li>
         </ul>
       </div>
-      <div className={`mb-6 rounded-2xl p-4 ${featured ? 'bg-white/10' : 'bg-cream'}`}>
-        <p className={`text-xs ${featured ? 'text-white/55' : 'text-ink/45'}`}>
+
+      <div
+        className={`mb-6 rounded-2xl p-4 ${
+          featured ? "bg-white/10" : "bg-cream"
+        }`}
+      >
+        <p
+          className={`text-xs ${
+            featured ? "text-white/55" : "text-ink/45"
+          }`}
+        >
           Effective cost per meal
         </p>
-        <p className="mt-1 font-display text-2xl font-bold">₹{per}</p>
+
+        <p className="mt-1 text-xl font-black">
+          ₹{per}
+        </p>
+
+          <span
+          className={`text-sm line-through ${
+            featured ? "text-white/50" : "text-ink/40"
+          }`}
+        >
+          ₹105/meal
+        </span>
       </div>
+
       <Link
         href="/contact"
-        className={`block rounded-full py-4 text-center text-sm font-bold transition hover:-translate-y-0.5 ${featured ? 'bg-orange-500 text-white hover:bg-orange-400' : 'bg-green text-white hover:bg-green-dark'}`}
+        className={`block rounded-full py-4 text-center text-sm font-bold transition hover:-translate-y-0.5 ${
+          featured
+            ? "bg-orange-500 text-white hover:bg-orange-400"
+            : "bg-green text-white hover:bg-green-dark"
+        }`}
       >
-        Start this plan <ArrowRight className="ml-1 inline" size={15} />
+        Start this plan
       </Link>
     </div>
   );
@@ -782,7 +849,7 @@ export function MenuPage() {
               <span className="text-green">Dal & sabzi change.</span>
             </h1>
             <p className="mt-5 max-w-lg text-lg leading-8 text-ink/60">
-             Every meal includes one fresh dal and one seasonal sabzi. Complete your 4-item meal by choosing any two from: roti, rice, salad, or raita.
+             Every meal includes one fresh dal and one seasonal sabzi. Complete your 4-item meal by choosing any two from: roti, rice, salad, or raita. Complimentary pickle.
             </p>
           </div>
           <div className="mt-10 flex flex-wrap gap-3 text-sm font-bold text-ink/60">
@@ -883,7 +950,7 @@ export function FaqPage() {
                 {
                   question: 'How long do I have to use my meals?',
                   answer:
-                    'The 7-meal plan must be consumed within 30 days of subscription start, and the 30-meal plan within 90 days. Any unconsumed meals after that period will expire, so you always get them at their freshest.',
+                    'The 7-meal plan must be consumed within 15 days of subscription start, and the 30-meal plan within 50 days. Any unconsumed meals after that period will expire, so you always get them at their freshest.',
                 },
               ])
               .map((faq, i) => (
@@ -1046,7 +1113,7 @@ window.open(
                     onChange={(e) => setPhone(e.target.value)}
                     required
                     type="tel"
-                    placeholder="+91 93542 36845"
+                    placeholder={CONTACT.phoneDisplay}
                     className="w-full rounded-xl border border-ink/10 bg-cream px-4 py-3.5 text-sm outline-none transition focus:border-orange-400 focus:ring-2 focus:ring-orange-100"
                   />
                 </div>
