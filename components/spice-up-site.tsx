@@ -24,18 +24,9 @@ import {
   X,
 } from 'lucide-react';
 
-const foodImage = 'home.PNG';
-// '/ChatGPT_Image_Aug_6,_2026,_11_38_28_AM.png';
+import menuItems from '@/data/menu.json';
 
-const menuItems = [
-  { day: 'Monday', dal: 'Dal Tadka/Dal Fry', sabzi: 'Aloo Gobhi/Baigan Bharta', color: 'bg-orange-50' },
-  { day: 'Tuesday', dal: 'Rajma Masala/Dal Makhni', sabzi: 'Mix Veg', color: 'bg-emerald-50' },
-  { day: 'Wednesday', dal: 'Chana Dal/Chana Masala', sabzi: 'Paneer Tikka Masala/Paneer Bhurji', color: 'bg-yellow-50' },
-  { day: 'Thursday', dal: 'Moong Dal/Kadhi Pakoda', sabzi: 'Kadai Vegetable/Aloo Matar', color: 'bg-orange-50' },
-  { day: 'Friday', dal: 'Chole/Aloo Soyabean', sabzi: 'Bhindi Masala/Parwal Masala', color: 'bg-emerald-50' },
-  { day: 'Saturday', dal: 'Matar Paneer/Matar Makhana', sabzi: 'Aloo Shimla/Lauki', color: 'bg-yellow-50' },
-  { day: 'Sunday', dal: `Dad's Special`, sabzi: `Mom's Special`, color: 'bg-orange-50' },
-];
+const foodImage = 'home.PNG';
 
 const fixedOptions = ['Roti', 'Rice', 'Salad', 'Raita'];
 
