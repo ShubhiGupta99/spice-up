@@ -28,7 +28,7 @@ import {
 import menuItems from '@/data/menu.json';
 import { CONTACT, PLAN_EXPIRY } from '@/lib/constants';
 
-const foodImage = 'home.PNG';
+const foodImage = 'home.png';
 
 const fixedOptions = ['Roti', 'Rice', 'Salad', 'Raita'];
 
@@ -371,7 +371,7 @@ function HowItWorks() {
       icon: PackageCheck,
       title: 'First day',
       text: 'We deliver a fresh meal in a clean steel tiffin at your doorstep.',
-      image: '/image1.PNG',
+      image: '/image1.png',
     },
     {
       icon: Utensils,
@@ -383,7 +383,7 @@ function HowItWorks() {
       icon: Truck,
       title: 'We deliver & exchange',
       text: 'We bring a new fresh tiffin and take back the old empty one.',
-      image: '/image2.PNG',
+      image: '/image2.png',
     },
     {
       icon: RefreshCw,
