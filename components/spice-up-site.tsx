@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 
 import menuItems from '@/data/menu.json';
+import { CONTACT } from '@/lib/constants';
 
 const foodImage = 'home.PNG';
 
@@ -172,7 +173,7 @@ export function Footer() {
               <Facebook size={17} />
             </a>
             <a
-              href="https://wa.me/919354236845"
+              href={`https://wa.me/${CONTACT.whatsapp}`}
               aria-label="WhatsApp"
               className="rounded-full bg-white/10 p-2.5 transition hover:bg-orange-500"
             >
@@ -196,9 +197,9 @@ export function Footer() {
             Say hello
           </p>
           <div className="grid gap-3 text-sm text-white/65">
-            <a href="tel:+919354236845">+91 93542 36845</a>
-            <a href="mailto:letstalk@thedabbastory.in">letstalk@thedabbastory.in</a>
-            <span>All days · 9am–10pm</span>
+            <a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phoneDisplay}</a>
+            <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+            <span>{CONTACT.hours}</span>
           </div>
         </div>
         <div className="rounded-3xl bg-white/10 p-5">
@@ -926,7 +927,7 @@ export function ContactPage() {
   );
 
 window.open(
-  `https://wa.me/918527026777?text=${encodedMessage}`,
+  `https://wa.me/${CONTACT.whatsapp}?text=${encodedMessage}`,
   "_blank"
 );
 
@@ -951,17 +952,17 @@ window.open(
             </p>
             <div className="mt-10 grid gap-5 text-sm">
               <a
-                href="https://wa.me/919354236845"
+                href={`https://wa.me/${CONTACT.whatsapp}`}
                 className="flex items-center gap-4 rounded-2xl bg-green p-4 font-bold text-white transition hover:bg-green-dark"
               >
                 <MessageCircle size={22} /> Chat with us on WhatsApp{' '}
                 <ArrowRight className="ml-auto" size={17} />
               </a>
               <a
-                href="tel:+919354236845"
+                href={`tel:${CONTACT.phoneTel}`}
                 className="flex items-center gap-4 rounded-2xl bg-white p-4 font-bold text-ink transition hover:shadow-md"
               >
-                <Phone size={20} className="text-orange-500" /> +91 9354 236845
+                <Phone size={20} className="text-orange-500" /> {CONTACT.phoneDisplay}
               </a>
             </div>
           </div>
