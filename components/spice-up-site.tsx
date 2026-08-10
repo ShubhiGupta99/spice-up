@@ -439,7 +439,7 @@ function Story() {
           <div className="absolute -left-4 -top-4 h-28 w-28 rounded-full border border-orange-400/40" />
           <div className="overflow-hidden rounded-[3rem] rounded-bl-[8rem] bg-orange-500 p-3">
             <img
-              src="/food.png"
+              src="/food1.png"
               alt="Traditional stainless-steel tiffin carriers"
               className="h-[430px] w-full rounded-[2.5rem] rounded-bl-[7rem] object-cover"
             />
