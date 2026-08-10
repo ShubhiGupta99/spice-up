@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 import menuItems from '@/data/menu.json';
-import { CONTACT } from '@/lib/constants';
+import { CONTACT, PLAN_EXPIRY } from '@/lib/constants';
 
 const foodImage = 'home.PNG';
 
@@ -714,6 +714,9 @@ function PlanCard({
       <p className={`text-sm ${featured ? 'text-white/65' : 'text-ink/55'}`}>
         7 fresh meals including 1 bonus meal
       </p>
+      <p className={`mt-2 text-xs ${featured ? 'text-white/55' : 'text-ink/45'}`}>
+        Meals must be consumed within {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start, after which the plan expires.
+      </p>
       <div className={`my-8 border-t pt-7 ${featured ? 'border-white/15' : 'border-ink/10'}`}>
         <p className="text-sm font-bold">Your plan includes</p>
         <ul className={`mt-4 grid gap-3 text-sm ${featured ? 'text-white/75' : 'text-ink/60'}`}>
@@ -858,6 +861,11 @@ export function FaqPage() {
                   question: 'Do you offer non-vegetarian meals?',
                   answer:
                     'We are currently focused on an excellent vegetarian menu, with fresh proteins and plenty of variety. Tell us what you would love to see next.',
+                },
+                {
+                  question: 'How long do I have to use my meals?',
+                  answer:
+                    'The 7-meal plan must be consumed within 30 days of subscription start, and the 30-meal plan within 90 days. Any unconsumed meals after that period will expire, so you always get them at their freshest.',
                 },
               ])
               .map((faq, i) => (
