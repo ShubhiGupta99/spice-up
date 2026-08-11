@@ -994,7 +994,7 @@ export function ContactPage() {
    const msg = [
   "🍱 *New Tiffin Service Enquiry*",
   "",
-  "👋 Hi SpiceUp Team!",
+  "👋 Hi The Dabba Story Team!",
   "",
   "🙋 *Customer Details*",
   `👤 Name: ${name}`,
