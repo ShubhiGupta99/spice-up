@@ -1,4 +1,5 @@
 export const PLAN_EXPIRY = {
+  '1 meal': '7 days',
   '7 days': '15 days',
   '30 days': '50 days',
 } as const;

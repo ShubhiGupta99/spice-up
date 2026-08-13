@@ -667,13 +667,20 @@ export function PricingPage() {
               and zero hidden charges.
             </p>
           </div>
-          <div className="mx-auto mt-14 grid max-w-4xl gap-6 lg:grid-cols-2">
+          <div className="mx-auto mt-14 grid max-w-5xl gap-6 lg:grid-cols-3">
+            <PlanCard
+              days="1 meal"
+              price="105"
+              per="105"
+              tag="Just one"
+              featured={false}
+            />
             <PlanCard
               days="7 days"
               price="630"
               per="90"
               tag="Try the routine"
-              featured={false} 
+              featured={false}
             />
             <PlanCard days="30 days" price="2,625" per="87.5" tag="Most popular" featured />
           </div>
@@ -764,7 +771,9 @@ function PlanCard({
       >
         {days === "30 days"
           ? "30 fresh meals including 5 bonus meals"
-          : "7 fresh meals including 1 bonus meal"}
+          : days === "7 days"
+            ? "7 fresh meals including 1 bonus meal"
+            : "1 fresh meal delivered to your door"}
       </p>
 
       <p
@@ -772,9 +781,11 @@ function PlanCard({
           featured ? "text-white/55" : "text-ink/45"
         }`}
       >
-        Meals must be consumed within{" "}
+        {days === "1 meal"
+          ? "Enjoy within 7 days of delivery."
+          : <>Meals must be consumed within{" "}
         {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start,
-        after which the plan expires.
+        after which the plan expires.</>}
       </p>
 
       <div
@@ -812,6 +823,7 @@ function PlanCard({
           ₹{per}
         </p>
 
+          {days !== "1 meal" && (
           <span
           className={`text-sm line-through ${
             featured ? "text-white/50" : "text-ink/40"
@@ -819,6 +831,7 @@ function PlanCard({
         >
           ₹105/meal
         </span>
+          )}
       </div>
 
       <Link
