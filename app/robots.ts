@@ -1,6 +1,6 @@
 export default function robots() {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://spiceup.co/sitemap.xml',
+    sitemap: 'https://www.thedabbastory.in/sitemap.xml',
   };
 }

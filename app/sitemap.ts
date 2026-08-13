@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = 'https://spiceup.co';
+  const base = 'https://www.thedabbastory.in';
   const routes = ['', '/pricing', '/menu', '/faq', '/contact'];
   return routes.map((route) => ({
     url: `${base}${route}`,
