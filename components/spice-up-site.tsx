@@ -663,7 +663,7 @@ export function PricingPage() {
               <span className="text-orange-500">Better value.</span>
             </h1>
             <p className="mt-5 text-lg leading-8 text-ink/60">
-              Pay for 6 meals and get the 7th on us. Every plan includes delivery, tiffin exchange,
+             Every plan includes delivery, tiffin exchange,
               and zero hidden charges.
             </p>
           </div>
