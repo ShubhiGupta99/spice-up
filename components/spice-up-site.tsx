@@ -160,7 +160,7 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             <a
-              href="#"
+              href={`https://www.instagram.com/thedabbastory.in?igsh=b2g0bXJjNHRrOXdz&utm_source=qr`}
               aria-label="Instagram"
               className="rounded-full bg-white/10 p-2.5 transition hover:bg-orange-500"
             >
