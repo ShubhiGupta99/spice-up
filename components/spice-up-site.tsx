@@ -781,7 +781,7 @@ function PlanCard({
           featured ? "text-white/55" : "text-ink/45"
         }`}
       >
-        {days !== "1 meal" && <>Meals must be consumed within{" "}
+        {days !== "1 meal" && <>" "}
         {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start,
         after which the plan expires.</>}
       </p>
