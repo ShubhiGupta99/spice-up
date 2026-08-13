@@ -166,13 +166,13 @@ export function Footer() {
             >
               <Instagram size={17} />
             </a>
-            <a
+            {/* <a
               href="#"
               aria-label="Facebook"
               className="rounded-full bg-white/10 p-2.5 transition hover:bg-orange-500"
             >
               <Facebook size={17} />
-            </a>
+            </a> */}
             <a
               href={`https://wa.me/${CONTACT.whatsapp}`}
               aria-label="WhatsApp"
@@ -781,7 +781,7 @@ function PlanCard({
           featured ? "text-white/55" : "text-ink/45"
         }`}
       >
-        {days !== "1 meal" && <>" "}
+        {days !== "1 meal" && <>Meals must be consumed within{" "}
         {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start,
         after which the plan expires.</>}
       </p>
