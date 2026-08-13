@@ -781,9 +781,7 @@ function PlanCard({
           featured ? "text-white/55" : "text-ink/45"
         }`}
       >
-        {days === "1 meal"
-          ? "Enjoy within 7 days of delivery."
-          : <>Meals must be consumed within{" "}
+        {days !== "1 meal" && <>Meals must be consumed within{" "}
         {PLAN_EXPIRY[days as keyof typeof PLAN_EXPIRY]} of subscription start,
         after which the plan expires.</>}
       </p>
@@ -800,9 +798,11 @@ function PlanCard({
             featured ? "text-white/75" : "text-ink/60"
           }`}
         >
-          <li>Daily doorstep delivery</li>
-          <li>Reusable steel tiffin exchange</li>
-          <li>Pause or skip anytime</li>
+          <li>Doorstep delivery</li>
+          {days === "1 meal"
+            ? <li>Use & throw packaging</li>
+            : <li>Reusable steel tiffin exchange</li>}
+          {days !== "1 meal" && <li>Pause or skip anytime</li>}
         </ul>
       </div>
 
