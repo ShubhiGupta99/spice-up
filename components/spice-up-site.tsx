@@ -571,10 +571,10 @@ function Testimonials() {
             </blockquote>
             <blockquote className="rounded-3xl bg-orange-500 p-7">
               <p className="text-lg leading-8 text-white">
-                “I used to spend 20 minutes deciding what to eat. Now I just wait for the little
-                green delivery bag.”
+                “The food is good and hygienic, and it tastes really homemade. I would definitely
+                recommend it to those looking for home-cooked food. Till then, enjoy Dabba Story.”
               </p>
-              <footer className="mt-6 text-sm font-bold text-orange-100">— Maneesh, Co-Founder</footer>
+              <footer className="mt-6 text-sm font-bold text-orange-100">— Nik</footer>
             </blockquote>
           </div>
         </div>
